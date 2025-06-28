@@ -1,0 +1,27 @@
+=== FIXED Novel Title ===
+Japanese: 貞操逆転世界に転生したら  
+English: Reborn in a Chastity Reversal World  
+
+=== FIXED Summary ===
+Following an accident after a snowy night, 40-year-old divorced salaryman Hirose Yuu reawakens as an extraordinarily handsome teenager with the same name in a parallel world defined by a skewed gender ratio and reversed chastity norms. Here, women dominate society, scarce men are protected subjects of polyandry, and a vast surplus of sexually frustrated women leads to frequent assaults on young males. Retaining his original world's values, Yuu interacts with women openly and joyfully – making him both an angelic figure to man-starved women and coveted prey. This is the story of his adaptation, followed by his descent into acting on his desires with women while navigating their aggressive advances, ultimately becoming consumed by this new reality.
+
+=== FIXED Translation Style ===
+- Use explicit terminology for sexual content
+- Preserve Japanese honorifics (-san, -chan, etc.)
+- Maintain the original Japanese name order (Last Name First Name for Japanese names) in English
+- If First Name used in Japanese text, use First Name in English (ex. `清華` -> `Sayaka`). Don't add/replace for Last Name if it's not in original text
+- Transliterate sound effects
+- New dialogue line starts with a new paragraph, except when preceded by an attribution
+- Italicize internal monologues (ex. `（ち、近い！）` -> `*(C-close!)*`)
+- Translate academic terms precisely
+- Explain culturally specific terms in notes
+- For name transliteration: Verify hiragana when first mentioned
+- Use gender-neutral terms when ambiguous
+- Reference Notes' Character Names for translation (ex. Komatsu Sayaka (小松 清華))
+- Professional titles translated formally
+- Euphemisms translated literally with context
+- Explicit anatomical terms translated directly
+- Sexual acts rendered without euphemisms
+- Dialogue quotes:
+  - Regular quotes: `「...」` → `"..."` (standard dialogue)
+  - Simultaneous quotes: `「「...」」` → `""...""` (ONLY when 2 characters speak/are silent at the same time)

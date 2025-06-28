@@ -1,0 +1,216 @@
+=== FIXED Character Names ===
+- Hirose Yuu (広瀬 祐): Male protagonist, reincarnated 40-year-old salaryman  
+- Hirose Martina (広瀬 マルティナ): Female, Yuu's mother (Spanish-Japanese)  
+- Hirose Elena (広瀬 エレナ): Female, Yuu's sister  
+- Toyoda Sakuya (豊田 咲弥): Male, deceased father of Hirose Yuu  
+- Kitamura Kanako (北村 香奈子): Female, S-rank male protection officer  
+- Kujira Touko (鯨 瞳子): Female, A-rank male protection officer  
+- Kawamata Akiko (川又 亜希子): Female, Hirose family housekeeper  
+- Saira Yutilainen (セーラ・ユーティライネン): Female, Hirose Yuu's half-sister  
+- Suzanna Yutilainen (スザンナ・ユーティライネン): Female, Saira's mother  
+- Yanai Miku (柳井 美玖): Female, Japan White Cross Society employee  
+- Takahata Kiyoko (高畑 季世子): Female, Hirose Yuu's half-sister  
+- Toyoda Satsuki (豊田 沙月): Female, Hirose Yuu's half-sister  
+- Toyoda Haruka (豊田 晴花): Female, Toyoda Sakuya's first wife  
+- Toyoda Fuyuno (豊田 布由乃): Female, Toyoda Sakuya's first wife  
+- Toyoda Koyuki (豊田 小雪): Female, Toyoda Sakuya's wife  
+- Toyoda Masaki (豊田 真咲): Male, Hirose Yuu's half-brother  
+- Tohru (亨): Male, Hirose Yuu's half-brother  
+- Yamazaki Mana (山崎 愛奈): Female, former tennis player  
+- Yamazaki Rina (山崎 莉奈): Female, Yamazaki Mana's sister  
+- Hidaka Akemi (日高 朱美): Female, pop idol "Akane"  
+- Loretta Clayton (ロレッタ・クライトン): Female, American student  
+- Tsutsui Takako (筒井 貴子): Female, actress  
+- Tsutsui Nana (筒井 夏那): Female, Tsutsui Takako's daughter  
+- Nishizawa Manami (西澤 満菜美): Female, inn proprietress  
+- Mitane Moeka (三種 萌花): Female, office worker  
+- Toyoda Kanna (豊田 カンナ): Female, Toyoda Koyuki's daughter  
+- Lucy Sawyer (ルーシー・ソウヤー): Female, Canadian supermodel  
+- Gokaichi Mina (五ケ市 美奈): Female, toy company employee  
+- Kate Grimwood (ケイト・グリムウッド): Female, also known as Kurimori Keiko  
+- Mihara Ryoko (美原 涼子): Female, delinquent  
+- Ehara Misa (江原 美沙): Female, delinquent  
+- Ushijima Mari (牛島 真理): Female, delinquent  
+- Ogi Ginko (尾木 吟子): Female, delinquent  
+- Kuroda Noriko (黒田 能理子): Female, kendo athlete  
+- Mitsuse Rinne (光瀬 凛音): Female, student council president  
+- Li Wei Hui (李 衛惠): Female, student council vice-president  
+- Omori Norika (大森 紀香): Female, student council vice-president  
+- Aizawa Midori (藍澤 碧): Female, student council president  
+- Hinuma Shuri (緋沼 朱里): Female, student council president  
+- Mikageishi Mayo (御影石 真夜): Female, student council president  
+- Asagi Ruriko (浅葱 瑠璃子): Female, middle school student council president  
+- Shiranui Sumiko (不知火 珠美子): Female, former student council president  
+- Kajio Shiho (梶尾 志穗): Female, nurse  
+- Takano Mio (高野 未緒): Female, nurse  
+- Inui Rumiko (乾 留美子): Female, Ministry of Health official  
+- Ro Chie (呂 千恵): Female, surgeon  
+- Fujiki Hiromi (藤木 宏美): Female, foundation staff  
+- Minatomo Shizuka (水伴 志津香): Female, politician's daughter  
+- Horikawa Sumie (堀川 澄恵): Female, Minatomo Shizuka's friend  
+- Gouda Tamaki (豪田 環): Female, Minatomo Shizuka's friend  
+- Mizuki Aoi (水木 葵): Female, pop idol "Mizuki Aoi"  
+- Jane Grimwood (ジェーン・グリムウッド): Female, Kate's mother  
+- Yonamine Yuki (與那嶺 由貴): Female, actress  
+- Higashino Rei (東野 怜): Male, Class 1-5, Hirose Yuu's classmate  
+- Yamada Masaya (山田 雅也): Male, Class 1-5, Hirose Yuu's classmate  
+- Hosho Haruto (法正 春人): Male, Class 1-5, Hirose Yuu's classmate  
+- Ichijo Koki (一条 晃輝): Male, 3rd year, popular student  
+- Komatsu Sayaka (小松 清華): Female, student council president  
+- Komatsu Kiyoka (小松 聖華): Female, Komatsu Sayaka's sister  
+- Hanmura Riko (半村 莉子): Female, student council vice-president  
+- Ishikawa Emi (石川 栄美): Female, student council secretary  
+- Ogawa Mizuki (小川 瑞希): Female, student council member  
+- Kawai Kiriko (河合 貴理子): Female, student council member  
+- Hanmura Sayori (半村 紗和): Female, student council member  
+- Aki Kazumi (安芸 和美): Female, Class 1-5  
+- Aramaki Yoshie (荒牧 好恵): Female, Class 1-5  
+- Anzai Rosa (安西 ローザ): Female, Class 1-5  
+- Ueno Shoko (上野 祥子): Female, Class 1-5  
+- Ukawa Miyoko (右川 美代子): Female, Class 1-5  
+- Kino Emiko (木野 恵美子): Female, Class 1-5  
+- Goto Mashiro (後藤 真白): Female, Class 1-5  
+- Sato Risa (佐藤 理沙): Female, Class 1-5  
+- Shimozono Kayo (下園 加代): Female, Class 1-5  
+- Tomioka Yumi (富岡 裕美): Female, Class 1-5  
+- Nakai Mao (中井 真央): Female, Class 1-5  
+- Naname Saya (七目 沙夜): Female, Class 1-5  
+- Hiyama Yoko (檜山 陽子): Female, Class 1-5 student, short bob hair, shy demeanor
+- Fukumoto Sachiko (福本 幸子): Female, Class 1-5  
+- Maiya Irene (舞屋 イレーネ): Female, Class 1-5  
+- Maegashira Yuma (前頭 結麻): Female, Class 1-5  
+- Mano Shiori (真野 詩織): Female, Class 1-5  
+- Yokota Satilat (横田 サティラット): Female, Class 1-5  
+- Yoshihara Makie (吉原 真紀恵): Female, Class 1-5  
+- Randou Yorika (蘭童 依花): Female, Class 1-5  
+- Koedogawa Ran (小江戸川 蘭): Female, 1st year  
+- Habaki Mai (巾木 舞): Female, 1st year  
+- Randou Ruika (蘭童 涙花): Female, 2nd year  
+- Hayakawa Ayumu (早川 歩): Female, 2nd year  
+- Uryu Yuri (瓜生 由梨): Female, 2nd year  
+- Aruma Vanessa (有間 ヴァネッサ): Female, 2nd year  
+- Akugawa Ryuko (阿久川 龍子): Female, 2nd year  
+- Naoki Mitoko (直木 美都子): Female, 2nd year  
+- Iida Aiko (飯田 愛子): Female, 3rd year  
+- Shiina Chizuru (椎名 千鶴): Female, PE course 3rd year, basketball team captain  
+- Constance Wilson (コンスタンス・ウィルソン): Female, PE course 3rd year  
+- Fujieda Wakako (藤枝 和歌子): Female, PE course 3rd year  
+- Sofue Tamami (祖父江 珠美): Female, PE course 3rd year  
+- Yabue Tamaki (藪江 環希): Female, PE course 3rd year  
+- O Urei (王 雨玲): Female, PE course 3rd year  
+- Baba Reiko (馬場 礼子): Female, PE course 3rd year  
+- Sakata Cristiano (坂田 クリスティアーノ): Female, PE course 3rd year  
+- Nagaki Riku (長城 莉玖): Female, PE course 3rd year  
+- Yawaki Michie (矢脇 美知恵): Female, PE course 3rd year  
+- Taiga Misao (太賀 美沙緒): Female, PE course 3rd year  
+- Koda Miwako (幸田 美輪子): Female, PE course 3rd year  
+- Hoshimi Aki (星海 愛生): Female, PE course 3rd year  
+- Ashina Karin (芦名 花凜): Female, PE course 3rd year  
+- Haigaki Yui (排垣 結衣): Female, PE course 3rd year  
+- Dei Kazuko (出井 賀寿子): Female, faculty  
+- Gonda Sakiko (権田 咲子): Female, faculty  
+- Shirayuki Saori (白雪 佐緒里): Female, faculty  
+- Tezuka Taeko (手塚 妙子): Female, faculty  
+- Kendo Maho (建堂 真保): Female, faculty  
+- Bitou (尾藤): Female, veteran nurse (40 years old)  
+- Eitou (衛藤): Female, nurse  
+- Kanbayashi (神林): Male, Hirose Yuu's homeroom teacher   
+- Kawamata Chihiro (川又 千尋): Female, Kawamata Akiko's daughter, 7 years old
+- Iida (飯田): Female, new housekeeper for Hirose family
+- Higashino Satomi (東野 慧美): Female, Higashino Rei's sister, middle school 2nd year
+- Komatsu Hanako (小松 華子): Female, Komatsu Sayaka's great-grandmother, founder of Komatsu Group  
+- Kurimori Keiko (栗森 慶子): Female, blonde leader of Saiou Red Scorpions, claims pure Japanese descent
+- Kuroda Noriko (黒田 能理子): Female, kendo athlete from rival school
+- Hayase Mika (速瀬 美加): Female, kendo club captain, Ichijo Koki's girlfriend
+- Ishima Mariko (伊島 麻里子): Female, Ichijo Koki's girlfriend
+- Ichinose Hatsumi (一之瀬 初美): Female, chairperson of Toyoda Sakuya Memorial Foundation
+- Yanai Miku (柳井 美玖): Female, Japan White Cross Society employee
+- Amir (アミル): Male, 12-13 year old tea server at Saiei Academy student council, dark skin
+- Nishizawa Yuuma (西澤 優真): Male, son of Nishizawa Manami and Hirose Yuu
+- Nishizawa Mayu (西澤 満由): Female, daughter of Nishizawa Manami and Hirose Yuu
+- Kodama Ayako (児玉 彩子): Female, chairwoman of the Ayakuni Group
+- Shiina Chizuru (椎名 千鶴): Female, PE course 3rd year, basketball team captain
+- Pauline Anderson (ポーリン・アンダースン): Female, African-American exchange student, basketball center
+- Constance Wilson (コンスタンス・ウィルソン): Female, Japanese-American forward, nickname "Connie"
+- Zusho Miyuki (図書 美由記): Female, Saiei Academy student council secretary
+- Aizawa Keiko (会澤 景子): Female, Saiei Academy student council accountant
+- Emmanuela (エマヌエーラ): Female, Italian wife of Toyoda Sakuya
+- Higashi Mako (東 真子): Female, leader of Holy Maiden Salvation Cult, age 42, real name of "Maria Toho"
+- Nagata Miho (長田 美保): Female, Health Committee Chairperson, tall with long black hair
+- Soejima Takeno (副島 健乃): Female, Health Committee Vice-Chairperson, short with tea-colored tousled hair
+- Komatsu Tomoka (小松 智華): Female, Sayaka's mother, marketing department head at Komatsu Group
+- Komatsu Hikaru (小松 光): Male, Sayaka's father
+- Komatsu Reika (小松 礼華): Female, Sayaka's grandmother, president of Komatsu Group
+- Komatsu Yoshioki (小松 義興): Male, Sayaka's grandfather
+- Hanmura Mako (半村 真子): Female, Hanmura Riko's mother, owner of variety shop
+- Ishikawa Asami (石川 亜沙美): Female, Ishikawa Emi's mother, still-life photographer
+- Yamazaki Mana (山崎 愛奈): Female, 23, sports company sales representative, Yuu's half-sister
+- Yamazaki Rina (山崎 莉奈): Female, vocational school student studying voice acting, Yuu's half-sister
+- Toyoda Kousaku (豊田 幸作): Male, Hirose Yuu's half-brother, 25-year-old physical education teacher from Shizuoka
+- Toyoda Takuya (豊田 卓弥): Male, Hirose Yuu's half-brother, 23-year-old graduate student from Kanagawa
+- Mitsuba Michiko (三葉 美智子): Female, employee of Mitsuba Construction, approximately 30 years old, tall with voluptuous figure
+- Mitsuba Miyako (三葉 美夜子): Female, employee of Mitsuba Electric, part of Mitsuba Group, sexually aggressive towards Yuu
+- Minatomo Tazuru (水伴 田鶴): Female, Shizuka's grandmother, politician
+- Minatomo Setsuko (水伴 勢津子): Female, Shizuka's mother, politician
+- Naoko (奈緒子): Female, 26-year-old guest member at Hesperis resort, virgin
+- Takahata Youko (高畬 容子): Female, mother of Takahata Kiyoko, one of Toyoda Sakuya's wives
+- Toyoda Tōya (豊田 冬弥): Male, Yuu's 29-year-old half-brother, son of Toyoda Fuyuno
+- Wase Tamiko (早稲 多美子): Female, 23-year-old university student, S Squad member, studious type with voluptuous figure
+- Mita Yukiko (三田 諭紀子): Female, 23-year-old university student, S Squad member, slender beauty with expressionless demeanor
+- Akeno Harumi (明野 治美): Female, 25-year-old Rescue Women Military Council member
+- Hokkyou Masae (法橋 政恵): Female, 25-year-old Rescue Women Military Council member
+- Ueda Tomoko (上田 智子): Female, 27-year-old Rescue Women Military Council member
+- Manaka Rio (真中 理央): Female, 28-year-old Rescue Women Military Council member
+- Hitotsubashi Yureka (一橋 有礼佳): Female, 29-year-old Rescue Women Military Council member
+- Noriko Williams (教子・ウィリアムズ): Female, 30-year-old sub-leader of Rescue Women Military Council
+- Ichika (イチカ): Female, Ogawa household housekeeper, late 30s, warm personality
+- Tsubara Yuuko (津原 優子): Female, Minister of Health, Labour and Welfare, member of Sakuya-kai political group
+- Satou Junko (佐藤 潤子): Female, Director-General of the Population Agency, youngest cabinet member
+- Fuekawa Pamela (笛川 パメラ): Female, announcer from Fuji TV, on assignment to Weekly Fuji. Half Japanese and French.
+- Kuki Kumiko (九鬼 久美子): Female, camera person for Weekly Fuji. Athletic build, reserved demeanor.
+- Randou Ruika (蘭童 泪花): Female, 2nd year Class 4, sister of Randou Yorika, shy demeanor with voluptuous figure
+- Asami Misaki (麻海 美咲): Female, Class 1-5 student, declares loyalty to Yuu
+- Ashino Nozomi (芦野 希実): Female, Class 1-5 student, paired with Misaki
+- Ioka Kayoko (井岡 香葉子): Female, Class 1-5 student, touches Yuu's right arm
+- Enuma Mana (江沼 茉菜): Female, Class 1-5 student, touches Yuu's left arm
+- Uyama Maya (鵜山 麻耶): Female, Class 1-5 student, D-cup breasts, stimulates Yuu's back
+- Sayama Masami (狭山 麻沙美): Female, Yuu's ex-wife in his previous life (maiden name)
+- Maruyama Orie (丸山 織恵): Female, 34-year-old confectionery company executive, previously encountered at Hesperis resort
+- Watanabe Kazuyo (渡辺 和世): Female, Sairei Academy office worker
+- Watanabe Miwa (渡辺 美和): Female, 7-year-old daughter of Kazuyo
+- Fukumoto Sachiko (福本 幸子): Female, Class 1-5 student, shy demeanor with slender build, virgin
+- Iruma Miyo (入間 美世): Female, Male Protection Officer Qualification B-grade, single mother with high school daughter, gentle/caring personality
+- Oosato Yoriko (大里 依子): Female, Male Protection Officer Qualification B-grade, tall/slender, taciturn, experienced in protecting VIP sons
+- Akugawa Ryuko (阿久川 龍子): Female, 2nd year, Literature Club president, short hair with sharp features
+- Naoki Mitoko (直木 美都子): Female, 2nd year Literature Club member, petite with long hair and baby face
+- Jane Mason (ジェーン・メイソン): Female, protagonist of this interlude, later known as Jane Grimwood
+- Miranda Mason (ミランダ・メイソン): Female, Jane's mother
+- John Mason (ジョン・メイソン): Male, Jane's brother
+- Catherine Mason (キャサリン・メイソン): Female, Jane's sister
+- Dominique Mason (ドミニク・メイソン): Female, Jane's sister
+- Sandra (サンドラ): Female, King Cobra gang member, former Marine sergeant
+- Morgan (モーガン): Female, Sakuya's aide, wears glasses and has a cold demeanor
+- John Grimwood (ジョン・グリムウッド): Male, victim of Jane's assault, approximately 20 years old with delicate features
+- Sakuma (朔摩): Male, Yuu's half-brother, university student, punk style
+- Saya (紗綾): Female, Sakuma's older sister, 26 years old, cool impression, wears silver-rimmed glasses
+- Sae (紗英): Female, Sakuma's older sister, 25 years old, former gyaru style, active and pushy
+- No new characters introduced
+- Ekushi Suzuko (江串 鈴子): Female, Kansai branch planning staff member of Toyoda Sakuya Memorial Foundation, wears silver-rimmed glasses
+- Zuken Junko (瑞慶覧 淳子): Female, director from CAN Planning, Okinawan background
+- Yonamine Yuki (與那嶺 由貴): Female, 19-year-old actress from CAN Planning, Yuu's co-star
+- Honjou Yuki (本条 優希): Female, Yuu's high school classmate from previous life
+- Kinjou Youko (金城 洋子): Female, 26-year-old staff member, semi-long black hair tied up, calm impression
+- Iha Minami (伊波 美南): Female, 23-year-old staff member, short bob brown hair, looks younger than age, cheerful personality
+- Terada (寺田): Female, Japanese-American criminal, Jane's cellmate and later associate
+- Sawaguchi (サワグチ): Female, Jane's associate in her criminal organization
+- Terada Ichiko (寺田 伊智子): Female, Jane Grimwood's cellmate who co-founded a company with her after meeting in detention, died in 1991
+- Komatsu Ritsuka (小松 律華): Female, Sayaka's great-aunt, dojo master
+- Fujita Kasumi (藤田 佳澄): Female, nurse from surgery department, 31 years old, married with one child
+- Nguyen Dieu Mai (阮妙梅): Female, Vietnamese nurse trainee, 23 years old
+- Hayakawa Taene (早川 妙音): Female, nursing student at Saito Municipal Nursing School, 2nd year, tall with short hair and sharp features
+- Takada Kozue (高田 梢恵): Female, nursing student at Saito Municipal Nursing School, voluptuous figure with hair in bun
+- Uchima Madoka (内間 円香): Female, nursing student at Saito Municipal Nursing School, petite with baby face and hair in bun
+- Fukuyama Himiko (福山 日美子): Female, Class 6 student, class representative, from shrine maiden family
+- Nishiguchi Narumi (西口 成美): Female, Class 6 student, class representative, plump and easygoing
+- Toyoda Arisa (豊田 愛里沙): Female, Toyoda Satsuki's daughter, 8th grade student with gyaru appearance but pure personality
+- Koyama Shino (小山 志乃): Female, senior from orphanage, now high-ranking yakuza member

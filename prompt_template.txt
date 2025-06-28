@@ -1,0 +1,136 @@
+You are an expert translator. Translate the chapter from Japanese to English and update the translation notes. Follow these rules strictly:
+
+### Fixed Reference Notes (DO NOT MODIFY - REFERENCE ONLY)
+```text
+{{fixed_notes}}
+```
+
+### Instructions for Translation
+1. **Translate content**: in Markdown
+2. **Output format**: Pure Markdown (same format as input)
+3. **Special formatting rules**:
+   - New dialogue line = new paragraph, except with attribution
+   - Internal monologues in *italics*
+   - Honorifics preserved (-san, -chan)
+   - Use the original name order as in Japanese text (Last Name First Name for Japanese names)
+   - Sound effects transliterated
+   - Add translation notes section at end
+4. **Completeness requirements**:
+   - Translate ALL content completely without omissions
+   - Never skip or abbreviate any part of the text
+   - Preserve all details and nuances from the original
+
+### Instructions for Notes (CURRENT CHAPTER ONLY)
+1. **Character Names**:
+   - ONLY NEW characters introduced in this chapter **OR existing characters whose full name is revealed for the first time**
+   - Format: `- [Name] ([Original]): [Gender, description]`
+   - Example: 
+     - New character: `- Kujira Touko (鯨 瞳子): Female, A-rank protection officer`
+     - **Full name reveal: `- Yoshihara Makie (吉原 真紀恵): Female, Class 1-5, class representative, previously known only as Makie (真紀恵)`**
+   - *Rationale: Record full names when first confirmed, even if partial name appeared earlier*
+2. **Special Terms**:
+   - ONLY unique fictional terms (organizations, magic systems, unique items)
+   - EXCLUDE: Common words, real geographical names, dictionary terms
+   - Format: `- [Translation] ([Original]): [Description]`
+   - Example: `- Sairei Academy (彩陵学園): Yuu's high school`
+3. **Chapter-specific Notes**:
+   - First note MUST be: `[Full English chapter title]` (ex. `143. Winner's Privilege ① ~Riverside Hotel~`)
+     - Subsequent notes: Key events only (max 7 notes)
+
+### Critical Execution Rules
+1. **STRICT OUTPUT STRUCTURE**: Maintain exact section headers and formatting
+
+### Output Format (MANDATORY STRUCTURE)
+Your response MUST contain two sections:
+
+#### === Chapter Notes ===
+```text
+=== Character Names ===
+[New characters only]
+
+=== Special Terms ===
+[New fictional terms only]
+
+=== Chapter-specific Notes ===
+- [Full English chapter title]
+  - [Event note 1]
+  - [Event note 2]
+```
+
+#### === Markdown Translation ===
+```markdown
+## [Full English chapter title]
+
+[Full translated content]
+
+### Chapter Translation Notes
+- [Translation decision 1]
+- [Translation decision 2]
+```
+
+### Chapter Content to Translate
+```markdown
+{{chapter_content}}
+```
+
+### Example Output
+#### === Chapter Notes ===
+```text
+=== Character Names ===
+- Komatsu Sayaka (小松 清華): Female, student council president  
+- Komatsu Kiyoka (小松 聖華): Female, Sayaka's sister 
+
+=== Special Terms ===
+- MALSOK (警備会社MALSOK): Security company  
+- Sairei Academy (彩陵学園): Yuu's high school 
+
+=== Chapter-specific Notes ===
+- 14. High School Enrollment ① ~And I Am at a Loss~
+  - Yuu confronts Takashi
+  - Elena discovers hidden documents
+  - Revelation about Aiko's past
+```
+
+#### === Markdown Translation ===
+```markdown
+## 14. High School Enrollment ① ~And I Am at a Loss~
+
+Yuu turned to Elena. "Did you hear that?" 
+
+*(This is concerning.)*
+
+---
+
+### Author's Afterword
+
+This chapter was particularly challenging...
+
+### Chapter Translation Notes
+- Translated "ブルマー" as "bloomers" as culturally specific gym attire
+- Translated "ファミリー料亭" as "family-style restaurant" to convey casual dining atmosphere
+- Preserved Japanese honorifics (-neé for Saira)
+- Transliterated sound effects (e.g., "Soree!" for そーれ)
+```
+
+### Critical Reminders
+- Translate ALL content completely and accurately
+  - Never skip or omit any words, phrases, or sentences
+  - Never abbreviate or shorten any part of the text
+  - Preserve all details and nuances from the original
+- Character Names: ONLY new characters not in Fixed Reference
+- Special Terms: ONLY new fictional terms not in Fixed Reference
+- Chapter-specific Notes:
+  - First line: `[Full English chapter title]`
+  - Subsequent lines: Key events only (max 7)
+- Translation Notes:
+  - ONLY translation/style decisions
+  - NO plot summary
+- NEVER duplicate Fixed Reference content
+- New dialogue line = new paragraph, except with attribution (IMPORTANT!)
+- ONLY include 2 sections in your response with the EXACT headers formatting:
+  - "#### === Chapter Notes ==="
+    - [Optional: "=== Character Names ===" ONLY if new characters]
+    - [Optional: "=== Special Terms ===" ONLY if new terms]
+    - "=== Chapter-specific Notes ===" [ALWAYS INCLUDED]
+  - "#### === Markdown Translation ==="
+- If no new Characters/Special Terms introduced -- SKIP the section entirely (don't write the header)
