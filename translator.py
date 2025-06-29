@@ -20,7 +20,7 @@ import config
 from logger import log_message, setup_encoding
 from markdown_fix import process_file as process_md_file
 
-# --- Utilities and regular expressions (unchanged) ---
+# --- Utilities and regular expressions ---
 
 JP_OR_CH_REGEX = re.compile(r'[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u3400-\u4DBF\u20000-\u2A6DF\u2A700-\u2B73F\u2B740-\u2B81F\u2B820-\u2CEAF\u2CEB0-\u2EBEF\u2F800-\u2FA1F]')
 EN_REGEX = re.compile(r'[a-zA-Z]')
@@ -33,7 +33,7 @@ def estimate_tokens(text: str) -> int:
     other_chars = len(text) - jp_or_ch_chars - en_chars  
     total_tokens_estimated = (jp_or_ch_chars * 0.6) + \
                              (en_chars * 0.3) + \
-                             (other_chars * 0.3) # Assume other characters are estimated as English  
+                             (other_chars * 0.3) # Assume other characters are similar to English
     return int(round(total_tokens_estimated))
 
 def format_duration(seconds_float):
@@ -49,7 +49,7 @@ def format_duration(seconds_float):
 
 class NovelTranslator:
     """
-    Class encapsulating the novel translation logic with detailed logging.
+    Class for encapsulating novel translation logic with detailed logging.
     """
     def __init__(self, service: str, novel_id: str):
         self.service = service
@@ -57,7 +57,7 @@ class NovelTranslator:
         self.api_key = self._load_api_key()
         self.api_config = config.API_CONFIG[service]
         self.session = self._create_age_verified_session()
-        self.prompt_template_content = None # Will be loaded for each chapter
+        self.prompt_template_content = None # Will be loaded per chapter
 
     def _get_novel_directory(self) -> str:
         dir_name = f"{config.NOVEL_DIR_PREFIX}{self.novel_id}"
@@ -106,9 +106,9 @@ class NovelTranslator:
             
             response.encoding = 'utf-8'
             if "年齢確認" in response.text:
-                log_message("Warning: Age verification page was detected despite bypass.")
+                log_message("Warning: Age verification page detected despite bypass.")
 
-            # Instead of extracting text, convert to Markdown
+            # Convert to Markdown instead of extracting plain text
             markdown_content = self._convert_chapter_to_markdown(response.text)
             token_estimate = estimate_tokens(markdown_content)
             log_message(f"Converted to Markdown: {len(markdown_content)} characters, ~{token_estimate} tokens")
@@ -119,7 +119,7 @@ class NovelTranslator:
             return ""
 
     def _process_ruby_tags(self, soup):
-        """Processes ruby tags to convert to text format"""
+        """Process ruby tags for text format conversion"""
         for ruby in soup.find_all('ruby'):
             rb = ruby.find('rb') or ruby.find_next(string=True)
             rt = ruby.find('rt')
@@ -131,7 +131,7 @@ class NovelTranslator:
         return soup
 
     def _convert_chapter_to_markdown(self, html_content: str) -> str:
-        """Converts syosetu chapter HTML to structured Markdown"""
+        """Convert syosetu chapter HTML to structured Markdown"""
         # Initialize HTML to Markdown converter
         h2t = html2text.HTML2Text()
         h2t.body_width = 0  # Disable line wrapping
@@ -143,7 +143,7 @@ class NovelTranslator:
         
         soup = BeautifulSoup(html_content, 'html.parser')
         
-        # Extract chapter title (level 2)
+        # Extract chapter title (level 2 heading)
         title_tag = soup.find('h1', class_='p-novel__title')
         title = title_tag.get_text(strip=True) if title_tag else "Untitled Chapter"
         markdown_output = f"## {title}\n\n"
@@ -153,12 +153,12 @@ class NovelTranslator:
         if not body_div:
             return markdown_output + "> Chapter content not found"
         
-        # Process author's preface (level 3)
+        # Process author's preface (level 3 heading)
         preface = body_div.find('div', class_='p-novel__text--preface')
         if preface:
             preface_text = self._process_ruby_tags(preface)
             markdown_output += "### Author's Preface\n\n" + h2t.handle(str(preface_text)) + "\n\n"
-            markdown_output += HR  # Horizontal rule after preface
+            markdown_output += HR  # Horizontal separator after preface
         
         # Process main text
         main_text_divs = []
@@ -173,20 +173,20 @@ class NovelTranslator:
         
         # Add separator before afterword if main text exists
         if main_text_divs and body_div.find('div', class_='p-novel__text--afterword'):
-            markdown_output += HR  # Horizontal rule before afterword
+            markdown_output += HR  # Horizontal separator before afterword
         
-        # Process author's afterword (level 3)
+        # Process author's afterword (level 3 heading)
         afterword = body_div.find('div', class_='p-novel__text--afterword')
         if afterword:
             afterword_text = self._process_ruby_tags(afterword)
             markdown_output += "### Author's Afterword\n\n" + h2t.handle(str(afterword_text)) + "\n\n"
         
-        # Remove extra line breaks
+        # Remove excessive newlines
         cleaned_output = re.sub(r'\n{3,}', '\n\n', markdown_output.strip())
         return cleaned_output
 
     def _load_all_notes(self) -> dict[str, str]:
-        """Loads all note files into a dictionary using config templates."""
+        """Load all note files into dictionary using config templates."""
         dir_name = self._get_novel_directory()
         loaded_notes = {}
         total_tokens = 0
@@ -208,7 +208,7 @@ class NovelTranslator:
         return loaded_notes
 
     def _build_prompt(self, chapter_content: str, all_notes: dict[str, str]) -> str:
-        # Combine all notes into a single block for the prompt
+        # Combine all notes into single block for prompt
         combined_notes = (
             f"{all_notes.get('static', '')}\n\n"
             f"{all_notes.get('chars', '')}\n\n"
@@ -225,7 +225,7 @@ class NovelTranslator:
         return prompt
 
     def _send_request_to_llm(self, prompt: str) -> str | None:
-        """Makes a single, interruptible API call attempt."""
+        """Make a single, interruptible API call attempt."""
         payload = {"model": self.api_config["model"], "messages": [{"role": "user", "content": prompt}], "temperature": config.DEFAULT_TEMPERATURE, "stream": False}
         headers = {"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"}
         
@@ -278,38 +278,37 @@ class NovelTranslator:
         return content
 
     def _parse_llm_response(self, cleaned_content: str) -> tuple[str, str]:
-        """Parses the response cleaned of <think> blocks, splitting into notes and markdown."""
+        """Parse cleaned response (without <think> blocks) splitting into notes and markdown."""
         try:
             _, notes_and_html = cleaned_content.split(config.NOTES_MARKER, 1)
             notes, html_block = notes_and_html.split(config.MD_TRANSLATION_MARKER, 1)
             
-            # Remove initial code block with possible spaces and newlines
+            # Remove starting code block with possible whitespace/newlines
             html_block = re.sub(r'^(\s*```\s*markdown\s*\n?)', '', html_block, flags=re.IGNORECASE)
             
-            # Find position of translation marker
+            # Find translation notes marker position
             marker_pos = html_block.find(config.CHAPTER_TRANSLATION_NOTES_MARKER)
             if marker_pos != -1:
-                # Find first non-whitespace character before the marker
+                # Find first non-whitespace character before marker
                 prev_char_pos = marker_pos - 1
                 while prev_char_pos >= 0 and html_block[prev_char_pos].isspace():
                     prev_char_pos -= 1
                 
                 # If there's a code block before whitespace
                 if prev_char_pos >= 2 and html_block[prev_char_pos-2:prev_char_pos+1] == '```':
-                    # Remove code block and all whitespace after it
-                    # Save part before the code block
+                    # Remove code block and all trailing whitespace
                     part_before = html_block[:prev_char_pos-2]
                     
-                    # Leave exactly 2 newlines before marker
+                    # Preserve exactly 2 newlines before marker
                     html_block = part_before + "\n\n" + config.CHAPTER_TRANSLATION_NOTES_MARKER
                     
-                    # Add remaining part after marker
+                    # Append remaining content after marker
                     if marker_pos + len(config.CHAPTER_TRANSLATION_NOTES_MARKER) < len(html_block):
                         html_block += html_block[marker_pos + len(config.CHAPTER_TRANSLATION_NOTES_MARKER):]
                     
                     log_message("Removed closing code block before translation notes marker")
 
-            # Remove trailing code block (only at very end of file)
+            # Remove ending code block (only at very end of file)
             html_block = re.sub(r'\n?\s*```\s*$', '', html_block, flags=re.IGNORECASE)
             
             html = html_block.strip()
@@ -320,48 +319,47 @@ class NovelTranslator:
             return "Could not extract notes.", cleaned_content
 
     def _validate_response_structure(self, response_content: str) -> tuple[bool, list[str]]:
-        """Checks for presence and order of key headers in LLM response."""
+        """Validate presence and order of key headers in LLM response."""
         messages = []
         
-        # 1. Find position of NOTES_MARKER
+        # 1. Find NOTES_MARKER position
         pos1 = response_content.find(config.NOTES_MARKER)
         if pos1 == -1:
             messages.append(f"Validation FAIL: Missing marker '{config.NOTES_MARKER}'")
             return False, messages
 
-        # 2. Find position of chapter_specific pattern
+        # 2. Find chapter_specific pattern position
         chapter_specific_pattern = config.NOTE_SECTION_PATTERNS["chapter_specific"]
-        # FIX: Added re.DOTALL flag so '.' matches newline
         match = re.search(chapter_specific_pattern, response_content, re.IGNORECASE | re.DOTALL)
         if not match:
             messages.append(f"Validation FAIL: Missing pattern for 'Chapter-specific Notes'")
             return False, messages
         pos2 = match.start()
 
-        # 3. Find position of MD_TRANSLATION_MARKER
+        # 3. Find MD_TRANSLATION_MARKER position
         pos3 = response_content.find(config.MD_TRANSLATION_MARKER)
         if pos3 == -1:
             messages.append(f"Validation FAIL: Missing marker '{config.MD_TRANSLATION_MARKER}'")
             return False, messages
         
-        # 4. Find position of CHAPTER_TRANSLATION_NOTES_MARKER
+        # 4. Find CHAPTER_TRANSLATION_NOTES_MARKER position
         pos4 = response_content.find(config.CHAPTER_TRANSLATION_NOTES_MARKER)
         if pos4 == -1:
             messages.append(f"Validation FAIL: Missing marker '{config.CHAPTER_TRANSLATION_NOTES_MARKER}'")
             return False, messages
 
-        # Check order
+        # Validate order
         if not (pos1 < pos2 < pos3 < pos4):
              messages.append(f"Validation FAIL: Markers are out of order. "
                            f"Order found: NOTES ({pos1}), CHAPTER_SPECIFIC ({pos2}), "
                            f"MD_TRANSLATION ({pos3}), TRANSLATION_NOTES ({pos4})")
              return False, messages
         
-        messages.append("Response structure OK: All required markers found in the correct order.")
+        messages.append("Response structure OK: All required markers found in correct order.")
         return True, messages
 
     def _validate_response_size(self, html: str, original_content: str) -> tuple[bool, list[str]]:
-        """Validates that translation size (excluding Chapter Translation Notes section) is within acceptable limits."""
+        """Validate translation size (excluding Chapter Translation Notes section) is within acceptable bounds."""
         is_valid = True
         messages = []
         
@@ -398,7 +396,7 @@ class NovelTranslator:
         else:
             messages.append(f"Clean text size OK: {translation_len} chars (ratio {ratio_percent}, within {min_expected}-{max_expected} [{min_ratio:.2f}x-{max_ratio:.2f}x])")
         
-        # Add full length info for debugging
+        # Add full length information for debugging
         if notes_marker_pos != -1:
             messages.append(f"Full response size: {len(html)} chars (including notes)")
             messages.append(f"Original clean text size: {original_clean_len} chars")
@@ -406,7 +404,7 @@ class NovelTranslator:
         return is_valid, messages
 
     def _clean_text_for_size_check(self, text: str) -> str:
-        """Cleans text from Markdown markup and normalizes whitespace for size validation."""
+        """Clean text from Markdown markup and normalize whitespace for size validation."""
         # Remove Markdown markup
         cleaned = re.sub(
             r'(#+\s*)|([*_]{1,3})|(\!?\[.*?\]\(.*?\))|(`{1,3}.*?`{1,3})|(^\s*[-*+]\s*)|(^\s*\d+\.\s*)|(\|.*?\|)|(---+)',
@@ -418,7 +416,7 @@ class NovelTranslator:
         # Replace HTML entities
         cleaned = html_escape.unescape(cleaned)
         
-        # Replace all sequences of spaces and newlines with single space
+        # Replace all whitespace sequences with single space
         cleaned = re.sub(r'\s+', ' ', cleaned)
         
         # Remove leading/trailing spaces
@@ -430,13 +428,13 @@ class NovelTranslator:
             match = re.search(pattern, llm_notes_section, re.DOTALL | re.IGNORECASE)
             if match:
                 content = match.group(1).strip()
-                # Remove possible trailing backticks in section
+                # Remove possible trailing backticks
                 clean_content = re.sub(r'`+$', '', content)
                 notes[key] = clean_content
         return notes
 
     def _get_updated_notes_content(self, current_notes: dict, new_notes: dict, part_num: str) -> dict[str, str]:
-        """Prepares updated content for note files."""
+        """Prepare updated content for note files."""
         updated_content = {}
         
         # 1. Update Character Names (append to end)
@@ -538,7 +536,7 @@ class NovelTranslator:
 
 
     def _create_backup(self, part_num: str, original_content: str, notes_before: dict, llm_response: str, final_translation: str, final_prompt: str, is_failure: bool = False):
-        """Creates a full backup including all note files and scripts."""
+        """Create complete backup including all note files and scripts."""
         dir_name = self._get_novel_directory()
         timestamp = datetime.now().strftime(config.BACKUP_TIMESTAMP_FORMAT)
         
@@ -551,7 +549,7 @@ class NovelTranslator:
         os.makedirs(backup_path, exist_ok=True)
         log_message(f"Creating {'failure ' if is_failure else ''}backup in: {backup_path}")
     
-        # Copy script files to backup
+        # Copy scripts to backup
         backed_up_scripts = []
         for script_name in config.SCRIPTS_TO_BACKUP:
             src_path = os.path.join(os.path.dirname(__file__), script_name)
@@ -572,7 +570,7 @@ class NovelTranslator:
             config.BACKUP_FILES["translation"].format(part_num=part_num.zfill(3)): final_translation,
         }
     
-        # Add note files (that existed before translation)
+        # Add note files (existing before translation)
         for note_key, content in notes_before.items():
             if content: # Backup only non-empty note files
                 filename_template = config.NOTE_FILE_TEMPLATES.get(note_key)
@@ -642,10 +640,10 @@ class NovelTranslator:
                     time.sleep(config.GENERAL_DELAY_SECONDS)
                 continue
 
-            # If structure is valid, parse response
+            # If structure valid, parse response
             llm_notes, translated_md = self._parse_llm_response(cleaned_llm_response)
             
-            # Check if parser returned original text (error sign)
+            # Check if parser returned original text (error indicator)
             if translated_md == cleaned_llm_response:
                 log_message("Translation failed validation (parsing error).")
                 self._create_backup(
@@ -681,10 +679,10 @@ class NovelTranslator:
                 log_message("Retrying after a delay...")
                 time.sleep(config.GENERAL_DELAY_SECONDS)
         
-        log_message(f"FATAL: Max {config.MAX_TRANSLATION_ATTEMPTS} attempts reached. Failed to get a valid translation for this chapter.")
+        log_message(f"FATAL: Max {config.MAX_TRANSLATION_ATTEMPTS} attempts reached. Failed to get valid translation for this chapter.")
+        sys.exit(1)  # Abort entire process with error
 
-
-# --- Command line functions (unchanged) ---
+# --- Command line functions ---
 def extract_novel_id_from_url(url: str) -> str:
     match = re.search(r'/(n[a-z0-9]+)/', url)
     return match.group(1) if match else "unknown_novel"
